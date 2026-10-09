@@ -17,6 +17,20 @@ function getWeeklyData(){const parsed=(el)=>{const raw=el.value;const n=Number(r
 function weeklyCalc(){const {start,rows}=getWeeklyData();const result=UnemploymentMath.weeklyBalance(start,rows);if(result.status==='invalid'){$('#first-negative').textContent='请填写非负金额';$('#weekly-detail').textContent='所有金额必须为非负的数字。';[...weeklyBody.querySelectorAll('.w-balance')].forEach(x=>x.textContent='—');return}const balances=[...weeklyBody.querySelectorAll('.w-balance')];result.end.forEach((v,i)=>{balances[i].textContent=v.toLocaleString('zh-CN',{maximumFractionDigits:2});balances[i].style.fontWeight=v<0?'800':'400';balances[i].style.color=v<0?'#bf3c35':''});const idx=result.firstNegative;$('#first-negative').textContent=idx>=0?'第'+(idx+1)+'周':'13周内未见负余额';$('#weekly-detail').textContent=idx>=0?'第'+(idx+1)+'周的预计余额为负，尽快检查到期款、收入确定性与可降低支出。':'这不代表未来安全；未到期债务和未预见医疗等支出仍需预留。'}
 $('#weekly-start').addEventListener('input',weeklyCalc);
 $('#weekly-export').addEventListener('click',()=>{const {start,rows}=getWeeklyData();const result=UnemploymentMath.weeklyBalance(start,rows);if(result.status==='invalid'){toast('请先填有效的非负金额');return}const all=[['周次','期初余额','确定收入','生活住房','到期债务','其他必要支出','周末余额']];let begin=start;rows.forEach((r,i)=>{all.push([i+1,begin,r.income,r.living,r.debt,r.other,result.end[i]]);begin=result.end[i]});const bom='\ufeff';const url=URL.createObjectURL(new Blob([bom+all.map(a=>a.join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='我的13周现金流.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000)});
+$('#copy-wechat').addEventListener('click',async()=>{
+    const id=$('#wechat-id').textContent;
+    try{await navigator.clipboard.writeText(id);toast('微信号 AIPMAndy 已复制')}
+    catch(_){
+        const ta=document.createElement('textarea');
+        ta.value=id;ta.readOnly=true;
+        ta.style.cssText='position:fixed;left:-9999px;top:0';
+        document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,id.length);
+        let copied=false;
+        try{copied=document.execCommand('copy')}catch(_){}
+        ta.remove();$('#copy-wechat').focus({preventScroll:true});
+        toast(copied?'微信号 AIPMAndy 已复制':'请手动复制微信号：AIPMAndy');
+    }
+});
 weeklyCalc();
 renderRoute();laborCalc();
 render();calc()})();

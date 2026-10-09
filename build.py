@@ -27,6 +27,16 @@ def build():
     page=page.replace('35<span style="font-size:26px">项</span>', f'{len(data["tasks"])}<span style="font-size:26px">项</span>')
     page=page.replace('35项', f'{len(data["tasks"])}项')
     page=page.replace('>35<',f'>{len(data["tasks"])}<')
+    # Optional author services sit beside the practical resources, without interrupting reading.
+    consultation_html = """<aside class="consultation panel" id="consultation" aria-labelledby="consultation-title"><div><p class="consultation-label">作者咨询服务 · 按需了解</p><h2 id="consultation-title">想找个人一起梳理下一步？</h2><p>求职方向、简历与面试、职业转型，或 AI 应用与个人副业，都可以找这份手册的作者 AI酋长 Andy 聊聊。</p><p class="consultation-note">手册持续免费开放。咨询按需选择，服务范围与费用先沟通确认。</p></div><div class="consultation-contact"><p>微信 <strong id="wechat-id">AIPMAndy</strong></p><div class="consultation-actions"><button id="copy-wechat" class="secondary" type="button">复制微信号</button><a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">先了解 Andy ↗</a></div><p class="consultation-note">添加时备注「求职咨询」或你想聊的问题，简单说说目前的情况。</p></div></aside>"""
+    tools_marker = '<section class="tools" id="tools">'
+    assert tools_marker in page
+    page = page.replace(tools_marker, consultation_html + tools_marker, 1)
+    nav_marker = '<a href="#sources">政策来源</a>'
+    assert nav_marker in page
+    page = page.replace(nav_marker, nav_marker + '<a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">Andy 官网 ↗</a>', 1)
+    footer_marker = '由 AI酋长 Andy 发起 · 开源免费 · 内容 CC BY 4.0 / 代码 MIT'
+    page = page.replace(footer_marker, footer_marker + ' · <a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">作者官网</a> · 微信 AIPMAndy', 1)
     (ROOT/'index.html').write_text(page,encoding='utf-8')
     from render_pages import write_all
     reader_count=write_all()
