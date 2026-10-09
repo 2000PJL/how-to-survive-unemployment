@@ -1,6 +1,8 @@
 # 发布到 GitHub / GitHub Pages
 
-目标仓库名称：`AIPMAndy/how-to-survive-unemployment`。**该仓库需要先创建；本目录是完整的独立开源项目源代码。**
+公开仓库：[AIPMAndy/how-to-survive-unemployment](https://github.com/AIPMAndy/how-to-survive-unemployment)，已于 **2026-10-09** 创建并推送。GitHub Pages 已配置为 `main` 分支根目录：[在线互动指南](https://aipmandy.github.io/how-to-survive-unemployment/)。
+
+本目录是完整的独立开源项目源代码。以下创建步骤供首次发布或 Fork 参考；维护当前仓库只需提交改动后 `git push`，不要重复创建仓库。
 
 ## 方式 A：使用 GitHub 网站（最简单）
 
@@ -35,7 +37,7 @@ gh repo create AIPMAndy/how-to-survive-unemployment --public --source=. --remote
 
 `https://aipmandy.github.io/how-to-survive-unemployment/`
 
-这个地址是**预计地址**，只有创建仓库并成功启用 Pages 后才会生效。项目已包含根目录 `index.html` 和 `.nojekyll`。
+本仓库已启用 Pages；后续推送至 `main` 会触发重新部署。项目包含根目录 `index.html` 和 `.nojekyll`，部署状态可在仓库 Actions 中查看。
 
 ## 给仓库做开源分发准备
 
@@ -53,6 +55,12 @@ python3 -m unittest discover -s tests -v
 node tests/calc.test.js  # 可选，需要Node.js
 ```
 
-在手机上手动核验：城市分流、补偿试算、任务勾选、13周现金表导出，以及打开《前72小时》的HTML文档。**当前环境的浏览器自动化受到访问限制，因此必须在实际浏览器完成这一步。**
+可选浏览器验证需要安装 Playwright 和 Chromium：
+
+```bash
+python3 tests/browser_smoke.py
+```
+
+如需使用已有 Chromium 浏览器，通过 `CHROMIUM_EXECUTABLE_PATH` 指定可执行文件。发布时已通过桌面与手机视口自动化检查；真实手机仍可手动核验城市分流、补偿试算、任务勾选、13周现金表导出，以及打开《前72小时》的HTML文档。
 
 参考 [GitHub传播和维护清单](LAUNCH.md)。
