@@ -1,0 +1,34 @@
+name: 城市政策更新 / Policy Update
+description: 提交一条带官方依据的失业、医保、公积金政策变化
+title: "[政策更新] 城市 - 主题"
+labels: ["policy"]
+body:
+  - type: markdown
+    attributes:
+      value: "请勿上传身份证、社保号、工资单、劳动合同原件或其他个人信息。政策必须附官方来源。"
+  - type: input
+    id: city
+    attributes:
+      label: 适用城市
+      placeholder: 北京 / 上海 / 其他城市
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 变更内容及适用条件
+      description: 写清楚哪类人、什么时间开始适用。
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: 政府或经办机构官方原文 URL
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: 核验日期（YYYY-MM-DD）
+    validations:
+      required: true

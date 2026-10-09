@@ -1,0 +1,15 @@
+name: 内容或网页问题 / Bug
+description: 报告阅读页的错误或不准确表述
+title: "[问题] 简述内容或功能"
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 发现的问题
+      description: 如果是政策错误，请尽量给出官方来源。不要填写个人敏感数据。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期正确行为或表述

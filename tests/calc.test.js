@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const m=require('../assets/calc.js');
+assert.equal(m.cashflow(80000,0,10000,0).months,8);
+assert.equal(m.cashflow(80000,20000,10000,0).months,6);
+assert.equal(m.cashflow(80000,0,10000,12000).status,'positive');
+assert.equal(m.cashflow(500,1000,100,0).status,'shortfall');
+assert.equal(m.cashflow(0,0,0,0).status,'zero');
+assert.equal(m.cashflow(-3,0,1,0).status,'invalid');
+assert.equal(m.compensation(3,8,15000).nAmount,60000);
+assert.equal(m.compensation(3,8,15000).doubleAmount,120000);
+assert.equal(m.compensation(3,2,15000).nAmount,52500);
+assert.equal(m.compensation(0,0,15000).nAmount,0);
+assert.equal(m.compensation(2,12,15000).status,'invalid');
+assert.deepEqual(m.weeklyBalance(100,[{income:0,expense:20},{income:50,expense:150}]).end,[80,-20]);
+assert.equal(m.weeklyBalance(100,[{income:0,expense:20},{income:50,expense:150}]).firstNegative,1);
+assert.equal(m.weeklyBalance(100,[{income:-3,expense:20}]).status,'invalid');
+console.log('CALC PASS: 14 boundary and regression assertions');
