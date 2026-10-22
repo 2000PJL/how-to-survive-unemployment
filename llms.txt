@@ -1,0 +1,35 @@
+# 失业了咋办？Andy 给你保姆级攻略（失业自救开源手册）
+
+> 失业怎么办？被裁员后怎么办？这是一份免费开源的中国大陆失业自救手册，按失业前、前 7 天、3 个月、6 个月、1 年，把 N / N+1 / 2N 补偿、失业金、医保社保、公积金、求职和家庭现金流拆成 50 项行动任务，附北京、上海政策原文。政策最后核验 2026-10-08。作者是 AI 酋长 Andy（@AIPMAndy）。
+
+本手册不提供针对个人的法律、财税或保险意见，办理时以当地官方最新政策为准。
+
+## 主要内容
+
+- [互动指南首页](https://aipmandy.github.io/how-to-survive-unemployment/): 50 项任务清单、现金流计算器、13 周现金流表、N/2N 试算、HR 沟通话术
+- [三分钟分流](https://aipmandy.github.io/how-to-survive-unemployment/guides/00-start-here.html): 按状态、城市、离职原因和医保状态给出办理顺序
+- [失业前](https://aipmandy.github.io/how-to-survive-unemployment/guides/01-before.html) · [失业后 7 天](https://aipmandy.github.io/how-to-survive-unemployment/guides/02-first-week.html) · [3 个月](https://aipmandy.github.io/how-to-survive-unemployment/guides/03-three-months.html) · [6 个月](https://aipmandy.github.io/how-to-survive-unemployment/guides/04-six-months.html) · [1 年](https://aipmandy.github.io/how-to-survive-unemployment/guides/05-one-year.html)
+- [北京政策](https://aipmandy.github.io/how-to-survive-unemployment/guides/beijing.html) · [上海政策](https://aipmandy.github.io/how-to-survive-unemployment/guides/shanghai.html)
+- [离职当天与 N/2N](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/01-labor-exit.html) · [失业金和医保](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/02-benefits-insurance.html) · [13 周现金流](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/03-cashflow-rescue.html) · [求职漏斗](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/04-job-search.html) · [第一笔付费](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/05-first-customer.html) · [家庭重启](https://aipmandy.github.io/how-to-survive-unemployment/playbooks/06-family-reset.html)
+- [GitHub 仓库](https://github.com/AIPMAndy/how-to-survive-unemployment)
+
+## 常见问题
+
+- 失业了第一件事做什么？先别急着签字，核对补偿、失业金和医保，再算手上的现金还能覆盖几个月。
+- 被裁员补偿一定是 N+1 吗？不一定。N、代通知金和违法解除赔偿是不同的法律情形。
+- 失业金有没有“第 7 天”死线？全国没有统一的“离职后第 7 天必须申请”的法定死线，按属地渠道申请。
+
+## 作者 About the author
+
+- AI 酋长 Andy（Andy Liu，GitHub/X @AIPMAndy）：前腾讯/百度 AI 产品专家，大模型独角兽前 VP，现专注 AI + 产品方法论创业。
+- AI Chief Andy (Andy Liu, @AIPMAndy on GitHub and X) is a former Tencent and Baidu AI product expert and former VP at an LLM unicorn, now a serial entrepreneur focused on AI and product methodology.
+- 服务：求职咨询；AI 增长和副业陪跑。服务范围先沟通确认。
+- 联系：微信 AIPMAndy · X https://x.com/AIPMAndy · Telegram https://t.me/AIPMAndy · 网站 https://metaver.vip/ · GitHub https://github.com/AIPMAndy
+
+## 作者的其他项目
+
+- [普通人跳槽涨薪指南](https://github.com/AIPMAndy/how-to-job-hop-and-raise-salary): 跳槽涨薪全流程：选岗、简历、面试、谈薪
+- [一个人靠 AI 赚钱](https://github.com/AIPMAndy/one-person-ai-income-guide): 验证需求、第一笔收款、交付与复购，附 30 天计划
+- [中国人赚美金](https://github.com/AIPMAndy/how-to-earn-usd-from-china): 8 种海外收入路线、获客、报价、收款与税务
+- [Grok Bot 中文攻略](https://github.com/AIPMAndy/grok-bot-handbook): Grok Bot / AI Agent 中文教程，26 章加 40 套任务指令
+- [FreeToken](https://github.com/AIPMAndy/FreeToken): 免费 AI API、免费大模型 API 额度合集

@@ -16,6 +16,10 @@
 
 ---
 
+**失业怎么办？被裁员后怎么办？** 这是一份免费开源的失业自救手册。它按失业前、前 7 天、3 个月、6 个月、1 年，把补偿、失业金、医保社保、公积金、求职和家庭现金流拆成 50 项行动任务，政策附北京、上海原文。
+
+*English: a free, open-source handbook on what to do after losing your job or being laid off in China: severance (N / N+1 / 2N), unemployment benefits, health insurance, housing fund, job search and family cash flow.*
+
 > **遇到裁员，先别急着签字。** 如果已经失业，先核对补偿、失业金和医保，再算你手上的现金还能覆盖几个月。后面的选择，才有判断基础。
 >
 > 本项目免费、无须登录，政策最后核验：**2026-10-08**。适用资格、金额和办理流程以**经办时**的官方最新政策和个人情况为准。本项目不提供针对个人的法律、财税或保险意见。
@@ -57,7 +61,7 @@
 
 **从这个入口开始：[0号指南：三分钟分流 →](guides/00-start-here.html)**。不需要从头读全部政策，也不需要公开工资流水。网站里选择自己的阶段、所在城市、离职原因和医保状态，给出对应办理顺序。这个分流**不判断你的法定资格**，资格由当地经办部门结合个案核定。
 
-**每个任务都补齐了四块：**事情是什么、具体怎么做、什么叫完成、如果没办下来怎么办。做完要留下合法取得的回执、记录或可核验结果，不是看过就勾。
+**每个任务都补齐了四块**：事情是什么、具体怎么做、什么叫完成、如果没办下来怎么办。做完要留下合法取得的回执、记录或可核验结果，不是看过就勾。
 
 ### 六份详细执行SOP
 
@@ -106,6 +110,32 @@ node tests/calc.test.js  # 开发者可选；验证纯算法边界
 
 **“北京和上海，医保断缴都要等 6 个月吗？”** 不能一概而论。特别是上海 2025 年实施细则规定了灵活就业参保的 6 个月一般等待期，**也规定原本正常享受职工或居民医保、在中断 3 个月内转为灵活就业职工医保可免等待期**的情形。参见 [上海市职工基本医疗保险办法实施细则](https://www.shanghai.gov.cn/gwk/search/content/6173c838284f43c3b4d8c8d4513364ed)。
 
+## 常见问题 FAQ
+
+### 失业了第一件事做什么？
+
+先别急着签字。核对补偿、失业金和医保，再算手上的现金还能覆盖几个月。具体顺序看上面的 [先做这 7 件事](#先做这-7-件事)。
+
+### 被裁员后怎么办，补偿一定是 N+1 吗？
+
+不一定。法律上的 N、代通知金和违法解除赔偿是不同的情形。先确认解除原因，别把不符合事实的“主动辞职”签成定案。详见 [离职当天与 N/2N](playbooks/01-labor-exit.html)。
+
+### 失业金怎么领，有没有“第 7 天”的死线？
+
+先核对失业保险资格，再按属地渠道申请。全国并没有统一的“离职后第 7 天必须申请”的法定死线。北京、上海的规定分别看 [北京政策](guides/beijing.md) 和 [上海政策](guides/shanghai.md)。
+
+### 失业以后医保会断吗？
+
+要当天查医保待遇是否正常，尤其要核对领取失业金期间是否由失业保险基金缴纳职工医保。断缴后要不要等待期，各地规定不同，上海的例外情形见上面“两个最容易踩的坑”。
+
+### 手上的钱还能撑几个月，怎么算？
+
+用近期可用资金减去近期必须偿还的债务，再除以家庭每月必要净支出。网站里有现金流计算器和 13 周现金流表，数字只在你的浏览器里计算，不会上传。
+
+### 这份手册收费吗？政策多久核验一次？
+
+免费，不用登录，下载后双击 `index.html` 离线也能用。政策最后核验日期是 2026-10-08，办理时以当地官方最新政策为准。
+
 ## 参与共建
 
 政策会变，城市之间也不同。欢迎提交 Issue 或 PR，**但请给出官方原文、适用人群、生效时间、核验日期**。个人经历请去标识化；不收集身份证号码、手机号、劳动合同扫描件、工资流水等个人信息。
@@ -131,3 +161,24 @@ node tests/calc.test.js  # 开发者可选；验证纯算法边界
 - 受 [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) 的**单文件可搜索开源阅读页**思路启发，项目内容与代码独立创作，并非其 Fork。
 
 **发起人：AI 酋长 Andy** · 欢迎补充有证据的城市经验。愿你的王国自由且富足。
+
+<!-- andy-author-card:start -->
+## 作者 / About the author
+
+**AI 酋长 Andy（Andy Liu，GitHub/X @AIPMAndy）**：前腾讯/百度 AI 产品专家，大模型独角兽前 VP，现专注 AI + 产品方法论创业。
+
+可以找我聊求职咨询、AI 增长和副业陪跑，服务范围和费用先沟通确认。
+
+微信 `AIPMAndy`（备注「求职咨询」）· [X @AIPMAndy](https://x.com/AIPMAndy) · [Telegram @AIPMAndy](https://t.me/AIPMAndy) · [个人官网 metaver.vip](https://metaver.vip/) · [Grok Bot 中文攻略](https://aipmandy.github.io/grok-bot-handbook/)
+
+*AI Chief Andy (Andy Liu, @AIPMAndy on GitHub and X) is a former Tencent and Baidu AI product expert and former VP at an LLM unicorn, now a serial entrepreneur focused on AI and product methodology.*
+
+### 作者的其他项目
+
+- [普通人跳槽涨薪指南](https://github.com/AIPMAndy/how-to-job-hop-and-raise-salary)：跳槽涨薪全流程：选岗、简历、面试、谈薪
+- [一个人靠 AI 赚钱](https://github.com/AIPMAndy/one-person-ai-income-guide)：验证需求、第一笔收款、交付与复购，附 30 天计划
+- [中国人赚美金](https://github.com/AIPMAndy/how-to-earn-usd-from-china)：8 种海外收入路线、获客、报价、收款与税务
+- [Grok Bot 中文攻略](https://github.com/AIPMAndy/grok-bot-handbook)：Grok Bot / AI Agent 中文教程，26 章加 40 套任务指令
+- [FreeToken](https://github.com/AIPMAndy/FreeToken)：免费 AI API、免费大模型 API 额度合集
+
+<!-- andy-author-card:end -->
